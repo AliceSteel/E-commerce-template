@@ -1,21 +1,19 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import './App.css';
-import Homepage from './pages/homepage/homepage.component';
-import Shoppage from './pages/shop/shop.component';
+import { Route, Routes} from 'react-router-dom';
+import Header from './routes/header/header.component';
+import Homepage from './routes/homepage/homepage.component';
+import Shoppage from './routes/shop/shop.component';
+import Signin from './routes/sign-in/signin.component';
 
-
-
-function App() {
+const App = () => {
   return (
-    <Router>
-
-      <Routes>
-        <Route path='/' element={<Homepage/>}/>
-        <Route path='/shop' element={<Shoppage/>} />
-      </Routes>
-      
-    </Router>
+    <Routes>
+		<Route path='/' element={<Header/>}>
+			<Route index element={<Homepage/>}/>
+			<Route path='shop' element={<Shoppage/>} />
+			<Route path='signin' element={<Signin/>}/>
+		</Route> 
+    </Routes>    
   );
 }
 

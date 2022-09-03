@@ -1,9 +1,9 @@
 import React from 'react'
 import './directory.styles.scss'
-import MenuItem from '../menu.item/menu-item.component';
+import CategoryItem from '../category-item/category-item.component';
 
 const Directory= () => {
-const section = [
+const sections = [
     {
       title: 'hats',
       imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
@@ -40,8 +40,8 @@ const section = [
 
   return (
     <div className='directory_menu'>
-        { section.map(({id, ...otherSectionProps}) => (
-            <MenuItem key={id} {...otherSectionProps} />
+        { sections.map(({id, ...otherSectionProps}) => (
+            <CategoryItem key={id} {...otherSectionProps} />
         ))}
     </div>
   )

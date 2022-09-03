@@ -1,9 +1,9 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
-import './menu-item.styles.scss'
+import './category-item.styles.scss'
 
-const MenuItem = ({ title, imageUrl, size, linkUrl}) => {
+const CategoryItem = ({ title, imageUrl, size, linkUrl}) => {
 	
     let navigate = useNavigate(); 
 
@@ -21,4 +21,4 @@ const MenuItem = ({ title, imageUrl, size, linkUrl}) => {
   )
 }
 
-export default MenuItem
+export default CategoryItem
