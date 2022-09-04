@@ -3,6 +3,8 @@ import { signInWithGooglePopup, createUserDocFromAuth, signInWithEmail } from ".
 
 import FormInput from "../form-input/form-input.component";
 import Btn from "../button/button.component";
+
+
 import  './sign-in-form.styles.scss'
 
 const defaultFormFields = {
@@ -14,12 +16,14 @@ const SignIn = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { email, password } = formFields;
 
+/* =======GOOGLE sign-in========================================================= */
+
     const logGoogleUser = async () => {
-        const {user} = await signInWithGooglePopup();
-        await createUserDocFromAuth(user);
+        await signInWithGooglePopup();
         resetForm();
     }
 
+/* ======FORM sign-in===================================================== */
 
     const handleChange = ({target}) => {
         setFormFields((otherFields)=> ({...otherFields, [target.name]: target.value}));
@@ -28,10 +32,9 @@ const SignIn = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await signInWithEmail(email, password)
+            const {user} = await signInWithEmail(email, password);
             resetForm();
         }
-
         catch(error){
             switch(error.code){
                 case 'auth/user-not-found':
@@ -49,6 +52,7 @@ const SignIn = () => {
            console.log('error signing in', error);
         }
     }
+    /* ======================================================================0 */
     const resetForm = () => {
         setFormFields(defaultFormFields)
     }
