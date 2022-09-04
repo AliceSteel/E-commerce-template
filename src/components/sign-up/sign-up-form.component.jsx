@@ -32,10 +32,18 @@ const SignUp = () => {
         }
 
         catch(error){
-            if(error.code==='auth/email-already-in-use'){
-                alert('cannot create user, email alredy in use')
+            switch (error.code){
+                case 'auth/invalid-password':
+                    alert('Password must be a string with at least six characters.');
+                    break;
+            
+                case 'auth/email-already-in-use':
+                    alert('Email alredy in use, please sign in');
+                    break;
+                default: 
+                    console.log('user creation ended error:', error);
             }
-            console.log('user creation ended error:', error);
+            
         }
     }
     const resetForm = () => {
