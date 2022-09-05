@@ -1,5 +1,5 @@
 import React from 'react'
-import CollectionItem from '../collection.item/collection.item.component'
+import CollectionItem from '../product-card/product-card.component'
 import './preview.collection.styles.scss'
 
 const PreviewCollection = ({title, items}) => {

@@ -1,15 +1,16 @@
-import React, {useState} from 'react';
-import SHOP_DATA from '../../data/shop.data';
-import PreviewCollection from '../../components/preview.collection/preview.collection.component';
+import React, {useState, useContext} from 'react';
+import {ProductsContext} from '../../contexts/products.context'
+import ProductCard from '../../components/product-card/product-card.component';
+import './shop.styles.scss'
 
 const Shoppage = () => {
-    const shopData = SHOP_DATA;
+  const {products} = useContext(ProductsContext)
 
   return (
-    <div className='shop-page'>
+    <div className='shop_page'>
         {
-            shopData.map(({id, ...otherCollectionProps}) => (
-                <PreviewCollection key={id}{...otherCollectionProps}/>
+            products.map((product) => (
+                <ProductCard key={product.id} product={product}/>
             ))
         }
     </div>

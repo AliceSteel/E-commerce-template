@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
+
 import './category-item.styles.scss'
 
 const CategoryItem = ({ title, imageUrl, size, linkUrl}) => {
@@ -17,6 +18,7 @@ const CategoryItem = ({ title, imageUrl, size, linkUrl}) => {
             <h1 className='title'>{title}</h1>
             <span className='subtitle'>SHOP NOW</span>
         </div>
+
     </div>
   )
 }
