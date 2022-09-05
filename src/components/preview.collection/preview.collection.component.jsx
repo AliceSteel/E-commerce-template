@@ -1,16 +1,19 @@
-import React from 'react'
-import CollectionItem from '../product-card/product-card.component'
+import React, {useContext} from 'react'
+import { ProductsContext } from '../../contexts/products.context'
+import ProductCard from '../product-card/product-card.component'
 import './preview.collection.styles.scss'
 
-const PreviewCollection = ({title, items}) => {
+const PreviewCollection = () => {
+  const {products} = useContext(ProductsContext);
+
   return (
     <div className='collection_preview'>
-        <h1 className='title'>{title.toUpperCase()}</h1>
+        <h1 className='title'>{products.title}</h1>
         <div className="preview">
             {
-                items.filter((item, index)=> index < 4)
+                products.filter((item, index)=> index < 4)
                     .map(({id, ...itemProps}) => (
-                    <CollectionItem key={id}{...itemProps} />
+                    <ProductCard key={id}{...itemProps} />
                 ))
             }
         </div>

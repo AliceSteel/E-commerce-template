@@ -8,9 +8,20 @@ const addFunc = (cartItems, productToAdd) => {
        return cartItems.map((item) => 
                     (item.id===productToAdd.id) ? {...item, qty: item.qty + 1} 
                     : item);
-
     } //if product exists in cart, increment qty:
     return [...cartItems,{...productToAdd, qty: 1}];   
+}
+
+const removeFunc = (cartItems, productToRem) => {
+    //find the item in the cart to remove:
+    const findItem = cartItems.find(el => el.id===productToRem.id);
+    //check if qty is equal to 1, so we can remove the whole product from cart:
+    if(findItem.qty === 1){
+        return cartItems.filter(item => item.id !== productToRem.id);
+    }//otherwise we decrease it by 1:
+    return cartItems.map((item) => 
+    (item.id===productToRem.id) ? {...item, qty: item.qty - 1} 
+    : item);
 }
 
 export const CartContext = createContext({
@@ -18,6 +29,7 @@ export const CartContext = createContext({
     setIsCartOpen: () => {},
     cartItems: [],
     addItemToCart: () => {},
+    removeItemFromCart: () => {},
     cartCount: 0
 })
 
@@ -35,6 +47,10 @@ export const CartProvider = ({children}) =>{
 
     const addItemToCart = (productToAdd) => {
         setCartItems(addFunc(cartItems, productToAdd));
+    }
+
+    const removeItemFromCart = (cartItemToRem) => {
+        setCartItems(addFunc(cartItems, cartItemToRem));
     }
 
     const value = {isCartOpen, setIsCartOpen, addItemToCart, cartItems, cartCount};
