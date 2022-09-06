@@ -1,16 +1,15 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
+import './directory-item.styles.scss'
 
-import './category-item.styles.scss'
-
-const CategoryItem = ({ title, imageUrl, size, linkUrl}) => {
+const DirectoryItem = ({ title, imageUrl, size, linkUrl}) => {
 	
     let navigate = useNavigate(); 
 
   return (
     <div onClick={() => navigate(`${linkUrl}`)}
-        className={`${size} menu_item`}>
+        className={`${size} directory_item`}>
         <div className='background_img' 
             style={{backgroundImage: `url(${imageUrl})`}} 
         />
@@ -23,4 +22,4 @@ const CategoryItem = ({ title, imageUrl, size, linkUrl}) => {
   )
 }
 
-export default CategoryItem
+export default DirectoryItem
