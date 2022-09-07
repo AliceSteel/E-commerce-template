@@ -5,7 +5,6 @@ import Homepage from './routes/homepage/homepage.component';
 import Shoppage from './routes/shop/shop.component';
 import Ckeckout from './routes/checkout/checkout.component';
 import Auth from './routes/authentication/auth.component';
-import PreviewCollection from './components/category-preview/preview.component';
 
 const App = () => {
   return (

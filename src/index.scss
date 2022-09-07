@@ -20,5 +20,9 @@ button,
 *:hover {
     transition: all .3s ease;
 }
-
+img {
+    width: 100%;
+    vertical-align: top;
+    object-fit: cover;
+}
    

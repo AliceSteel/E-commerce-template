@@ -6,16 +6,12 @@ import './auth.styles.scss'
 
 const Auth = () => {
     
-   
   return (
     
-    <div className='auth_container'>
-            
+    <div className='auth_container'>    
         <SignIn/>
         <SignUp/>
     </div>
-    
-    
   )
 }
 

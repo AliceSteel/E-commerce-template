@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import { Outlet, Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 import { ReactComponent as CrwLogo } from '../../assets/crown.svg';
 import { UserContext } from '../../contexts/user.context';
@@ -20,16 +20,13 @@ const Header = () => {
 		<>
 			<HeaderContainer>
 				<LogoContainer to='/'>
-					<CrwLogo className='logo'/>
+					<CrwLogo />
 				</LogoContainer>
 				<NavLinks>
-                    <NavLink className='nav_link' to='/shop'>
-                        Shop
-                    </NavLink>
-					{currentUser ? (<NavLink as='span' onClick={signOutUser} className='nav_link'>SIGN OUT</NavLink>)
-							: (
-								<NavLink as='span' to='/auth'>SIGN IN</NavLink>
-					)}
+                    <NavLink to='shop'>SHOP</NavLink>
+
+					{currentUser ? (<NavLink onClick={signOutUser} >SIGN OUT</NavLink>)
+							: (<NavLink to='auth'>SIGN IN</NavLink>)}
 					<CartIcon/>
                 </NavLinks>
 				{ isCartOpen && <CartDropdown/>}
