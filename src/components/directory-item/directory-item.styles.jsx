@@ -26,7 +26,7 @@ export const Content = styled.div`
         margin-bottom: 6px;
         font-size: 22px;
         color: #4a4a4a;
-        text-transform:uppercase;
+        text-transform: uppercase;
       }
   
       p {

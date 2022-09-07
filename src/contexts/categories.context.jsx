@@ -4,7 +4,6 @@ import { addCollectionAndDocs, getCategoriesAndDocs } from '../utilities/firebas
 
 export const CategoriesContext = createContext({
     categoriesMap: {},
-
 });
 
 export const CategoriesProvider = ({children}) => {
