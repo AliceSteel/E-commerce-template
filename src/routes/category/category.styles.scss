@@ -1,4 +1,12 @@
-.category-container {
+.category_container {
+    padding-top: 80px;
+    width: 100%;
+    max-width: 1191px;
+    margin: 0 auto;
+    
+}
+.category_wrap {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 20px;

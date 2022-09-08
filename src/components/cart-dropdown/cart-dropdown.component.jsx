@@ -14,6 +14,7 @@ const CartDropdown = () => {
   const navigate = useNavigate();
 
   const checkoutHandler = () => navigate('/ckeckout')
+  
   return (
     <CartDropdownContainer>
         <CartItemsContainer>

@@ -1,5 +1,13 @@
 .directory_menu {
-    width: 100%;
+  margin-top: -80px;
+  padding: 100px 0;
+  background-color: #F5FF87;
+    
+  }
+  .directory_wrap {
+    width: 90%;
+    max-width: 1191px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

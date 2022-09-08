@@ -9,9 +9,12 @@ const Directory= () => {
 
   return (
     <div className='directory_menu'>
+      <div className="directory_wrap">
         { SECTIONS.map((section) => (
             <DirectoryItem key={section.id} category={section} />
         ))}
+      </div>
+        
     </div>
   )
 }
