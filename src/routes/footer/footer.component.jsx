@@ -16,6 +16,8 @@ const Footer = () => {
                         </NavLink>
                         <NavLink to="https://www.facebook.com/" target="_blank" rel="nofollow, noreferrer" >Facebook
                         </NavLink>
+                        <NavLink to="https://www.linkedin.com/" target="_blank" rel="nofollow, noreferrer" >LinkedIn
+                        </NavLink>
                     </SocialNav>
 	    </FooterWrap>
         </FooterContainer>

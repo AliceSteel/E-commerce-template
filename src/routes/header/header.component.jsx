@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { Outlet } from 'react-router-dom'
 
-import Logo from '../../assets/logo.jpg';
+import Logo from '../../assets/logo.png';
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 

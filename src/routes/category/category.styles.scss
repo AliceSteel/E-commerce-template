@@ -2,16 +2,17 @@
     padding-top: 80px;
     width: 100%;
     max-width: 1191px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
     
 }
 .category_wrap {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
-    row-gap: 15px;
+    column-gap: 10px;
+    row-gap: 70px;
 }
 h2 {
-    text-align: center;
+    text-align: left;
+    padding-bottom: 2rem;
 }

@@ -4,14 +4,13 @@ export const BaseBtn = styled.button`
   width: 80%;
   max-width: 300px;
   height: 50px;
-  font-size: 15px;
+  font-size: 1rem;
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Khula', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-weight: bolder;
   border: 2px solid transparent;
-  border-radius: 8px;
   cursor: pointer;
   display: flex;
   justify-content: center;

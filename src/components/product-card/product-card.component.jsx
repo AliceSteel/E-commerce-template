@@ -14,8 +14,8 @@ const ProductCard = ({product}) => {
     <div className='product_card_container'>
         <img src={imageUrl} alt={name} />
         <div className="footer">
-            <span className='name'>{name}</span>
-            <span className='price'>{price}</span>
+            <div className='name'>{name}</div>
+            <div className='price'>£{price}</div>
         </div>
         <Btn 
           btnType={BUTTON_TYPE_CLASSES.inverted} 

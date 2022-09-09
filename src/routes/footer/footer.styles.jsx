@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 export const FooterContainer = styled.div`
     width: 100%;
     background-color: #000;
+    padding: 0 50px;
 `;
 
 export const FooterWrap = styled.div`
@@ -19,14 +20,14 @@ export const FooterWrap = styled.div`
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.2rem;
-  padding: 66px 0 77px;
+  padding: 70px 0;
 `;
   
 export const Copyright = styled.div`
   color: rgba(255, 255, 255, 0.37);
 `;
 
-export const SocialNav = styled.ul`
+export const SocialNav = styled.div`
   width: 100%;
   max-width: 325px;
   display: flex;
@@ -35,6 +36,6 @@ export const SocialNav = styled.ul`
 
 `;
 export const NavLink = styled(Link)`
-    margin-left: 23px; 
     color: #fff;
+    text-align: left;
 `;

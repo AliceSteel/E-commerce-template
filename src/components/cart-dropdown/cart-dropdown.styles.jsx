@@ -10,10 +10,7 @@ export const CartDropdownContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  border-radius: 8px;
+  border: 1px solid black;
   background-color: rgba(255, 255, 255, .8);
   top: 80px;
   right: 40px;
@@ -23,6 +20,7 @@ export const CartDropdownContainer = styled.div`
   ${GoogleSignInBtn},
   ${InvertedBtn} {
     margin-top: auto;
+    width: 100%
   }
 `;
 
