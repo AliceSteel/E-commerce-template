@@ -3,6 +3,11 @@
     width: 100%;
     max-width: 1191px;
     margin: 0 auto 50px;
+
+    h2 {
+        text-align: left;
+        padding-bottom: 2rem;
+    }
     
 }
 .category_wrap {
@@ -11,8 +16,4 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 10px;
     row-gap: 70px;
-}
-h2 {
-    text-align: left;
-    padding-bottom: 2rem;
 }

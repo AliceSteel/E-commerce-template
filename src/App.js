@@ -6,6 +6,7 @@ import Homepage from './routes/homepage/homepage.component';
 import Shoppage from './routes/shop/shop.component';
 import Ckeckout from './routes/checkout/checkout.component';
 import Auth from './routes/authentication/auth.component';
+import Blog from './routes/blog/blog.component';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
 				<Route path='shop/*' element={<Shoppage/>} />
 				<Route path='auth' element={<Auth/>}/>
 				<Route path='ckeckout' element={<Ckeckout/>}/>
+				<Route path='blog' element={<Blog/>}/>
 			</Route>
 				
 		</Route>

@@ -13,7 +13,6 @@ const DirectoryItem = ({ category }) => {
         <BackgroundImg imageUrl={imageUrl} />
         <Content>
             <h2>{title}</h2>
-            <p>SHOP NOW</p>
         </Content>
 
     </DirectoryItemContainer>

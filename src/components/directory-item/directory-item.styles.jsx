@@ -10,8 +10,7 @@ export const BackgroundImg = styled.div`
 `;
 
 export const Content = styled.div`
-	height: 90px;
-	padding: 0 25px;
+	padding: 25px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -23,21 +22,16 @@ export const Content = styled.div`
 
 	h2 {
         font-weight: bold;
-        margin-bottom: 6px;
         font-size: 22px;
         color: #4a4a4a;
         text-transform: uppercase;
       }
   
-      p {
-        font-weight: lighter;
-        font-size: 16px;
-      }
 `;
 
 export const DirectoryItemContainer = styled(Link)`
 	min-width: 30%;
-	height: 240px;
+	height: 340px;
 	flex: 1 1 auto;
 	display: flex;
 	align-items: center;

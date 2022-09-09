@@ -20,7 +20,7 @@ const Category = () => {
     <div className="category_container">
         <h2>{category.toUpperCase()}</h2>
             <div className='category_wrap'>
-            { products &&  //safequarded from empty array during render
+            { products &&                  //safequarded from empty array during render
                 products.map((product) => (
                     <ProductCard key={product.id} product={product}/>
                 ))

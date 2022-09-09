@@ -4,8 +4,12 @@
   height: 80px;
   margin-bottom: 15px;
 
-  .img_wrap {
+  .img_wrapper {
     width: 30%;
+    overflow: hidden;
+    img {
+      vertical-align: middle;
+    }
   }
 
   .item-details {

@@ -10,7 +10,7 @@ import { signOutUser } from '../../utilities/firebase/firebase';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
-import {HeaderContainer, NavLinks, NavLink, LogoContainer, FooterWrap, Copyright, SocialNav} from './header.styles'
+import {HeaderContainer, NavLinks, NavLink, LogoContainer} from './header.styles'
 
 const Header = () => {
 	const {currentUser} = useContext(UserContext);
@@ -23,8 +23,7 @@ const Header = () => {
 					<img src={Logo} alt='logo'/>
 				</LogoContainer>
 				<NavLinks>
-                    <NavLink to='shop/womens'>Womens</NavLink>
-					<NavLink to='shop/mens'>mens</NavLink>
+                    <NavLink to='shop'>Shop</NavLink>
 
 					{currentUser ? (<NavLink onClick={signOutUser} >SIGN OUT</NavLink>)
 							: (<NavLink to='auth'>SIGN IN</NavLink>)}

@@ -34,7 +34,7 @@ export const NavLinks = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 30px;
 `;
 
