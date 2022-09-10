@@ -1,5 +1,7 @@
-.blog_container {
-    width: 100%;
+import styled from 'styled-components';
+
+export const BlogContainer = styled.div`
+    width: 90%;
     max-width: 1191px;
     margin: 0 auto;
     p {
@@ -7,23 +9,23 @@
         line-height: 2rem;
         text-align: left;
     }
-}
-.title_wrap {
+`;
+
+export const TitileWrap = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+`;
 
-}
-.img_wrap,
-.title {
+export const ImgWrap = styled.div`
     width: 40%;
     min-width: 400px;
-
-}
-
-.title {
+`;
+export const Title = styled.div`
+    width: 40%;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -36,9 +38,9 @@
     sub {
         text-transform: uppercase;
     }
-}
+`;
 
-.red_line {
+export const RedLine = styled.div`
     width: 100%;
     height: 20px;
     background-color: red;
@@ -46,4 +48,4 @@
     top: -20px;
     left: -5px;
     z-index: 4;
-}
+`;

@@ -1,23 +1,24 @@
 import React from 'react'
 import BlogImg from '../../assets/blog.jpg'
-import './blog.styles.scss'
+
+import { BlogContainer, ImgWrap, RedLine, TitileWrap, Title } from './blog.styles.jsx'
 
 const Blog = () => {
   return (
-    <div className='blog_container'>
-        <div className="title_wrap">
-            <div className="img_wrap">
+    <BlogContainer>
+        <TitileWrap>
+            <ImgWrap>
                 <img src={BlogImg} alt='blog image'/>
-            </div>
-            <div className="title">
+            </ImgWrap>
+            <Title>
                 <sub>Fashion -</sub>
                 <h1>Best GUIDE in 2022 - how to navigate style vs fashion trap</h1>
-                <div className='red_line'></div>
+                <RedLine />
                 <sub>by susan doe</sub>
-            </div>
+            </Title>
             
         
-        </div>
+        </TitileWrap>
         <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sapiente est nesciunt similique incidunt doloremque atque illo a mollitia sequi numquam, ut quod. Explicabo, praesentium. Dolor accusantium sequi quasi velit?
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique eius ducimus quam natus laborum accusantium perspiciatis maiores minus quod cum. Aliquid exercitationem minus illum dolore. Odio iure voluptatum laboriosam veniam.
@@ -29,7 +30,7 @@ const Blog = () => {
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique eius ducimus quam natus laborum accusantium perspiciatis maiores minus quod cum. Aliquid exercitationem minus illum dolore. Odio iure voluptatum laboriosam veniam.
         </p>
 
-    </div>
+    </BlogContainer>
   )
 }
 

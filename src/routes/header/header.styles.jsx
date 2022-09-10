@@ -39,12 +39,35 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   color: #000;
   text-transform: uppercase;
+  font-weight:700;
+  position: relative;
+	overflow: hidden;
+  padding: 7px 0;
+
+  &::after{
+    background-color: #000;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    transform: translateX(calc(-100% - .1rem));
+    transition: opacity 400ms, transform 400ms;
+  }
+  &:hover::after,
+  &:focus::after{
+    opacity: 1;
+	transform: translateX(0);
+  }
 `;
+
 
