@@ -8,7 +8,6 @@ import { AuthContainer } from './auth.styles.jsx';
 const Auth = () => {
     
   return (
-    
     <AuthContainer>    
         <SignIn/>
         <SignUp/>

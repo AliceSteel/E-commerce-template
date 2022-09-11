@@ -8,7 +8,7 @@ export const HomepageContainer = styled.div`
     position: relative;
 
     &:hover {
-            & img {
+        & img {
                 transform: scale(1.1);
                 transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
             }
@@ -44,7 +44,6 @@ export const SectionsContainer = styled.div`
 
 export const SectionPreviewWrap = styled.div`
     width: 100%;
-    padding: 70px 0 113px;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
