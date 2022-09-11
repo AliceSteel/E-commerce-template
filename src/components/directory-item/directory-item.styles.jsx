@@ -30,14 +30,14 @@ export const Content = styled.div`
 `;
 
 export const DirectoryItemContainer = styled(Link)`
-	min-width: 30%;
+	width: 30%;
+	min-width: 200px;
 	height: 340px;
 	flex: 1 1 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border: 1px solid black;
-	margin: 0 7.5px 15px;
 	overflow: hidden;
 
 	&:hover {
@@ -54,14 +54,6 @@ export const DirectoryItemContainer = styled(Link)`
 
 	&.large {
 	height: 380px;
-	}
-
-	&:first-child {
-	margin-right: 7.5px;
-	}
-
-	&:last-child {
-	margin-left: 7.5px;
 	}
 
 `;

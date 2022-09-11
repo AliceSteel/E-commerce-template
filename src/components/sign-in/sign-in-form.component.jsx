@@ -4,7 +4,7 @@ import { signInWithGooglePopup, createUserDocFromAuth, signInWithEmail } from ".
 import FormInput from "../form-input/form-input.component";
 import Btn, {BUTTON_TYPE_CLASSES} from "../button/button.component";
 
-import  './sign-in-form.styles.scss'
+import { BtnsWrap, SignInContainer } from "./sign-in-form.styles.jsx";
 
 const defaultFormFields = {
     email: '',
@@ -57,7 +57,7 @@ const SignIn = () => {
     }
 
   return (
-    <div className="sign_up_container">
+    <SignInContainer>
         <h2>Already have an account?</h2>
         <span>Sign in with your email and password</span>
         <form onSubmit={handleSubmit}>
@@ -79,16 +79,16 @@ const SignIn = () => {
                 value={password} 
                 autoComplete='new-password'
             />
-            <div className="btns_container">
+            <BtnsWrap>
                 <Btn type='submit'>Sign In</Btn>
                 <Btn type='button'
                     btnType={BUTTON_TYPE_CLASSES.google} 
                     onClick={logGoogleUser}
                 >Google Sign in</Btn>
-            </div>
+            </BtnsWrap>
             
         </form>
-    </div>
+    </SignInContainer>
   )
 }
 

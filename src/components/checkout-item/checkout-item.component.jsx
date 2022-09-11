@@ -16,7 +16,7 @@ const CheckoutItem = ({cartItem}) => {
         <ImgWrap>
             <img src={imageUrl} alt={name} />
         </ImgWrap>
-        <Item>{name}</Item>
+        <Item>{name.toUpperCase()}</Item>
         <Item>
             <Controler onClick={reduceHandler}>&#10094;</Controler>
             <span>{qty}</span>

@@ -3,7 +3,7 @@ import { createAuthWithEmail, createUserDocFromAuth } from "../../utilities/fire
 import FormInput from "../form-input/form-input.component";
 import Btn from "../button/button.component";
 
-import  './sign-up-form.styles.scss'
+import { SignInContainer } from "../sign-in/sign-in-form.styles";
 
 const defaultFormFields = {
     displayName: '',
@@ -53,7 +53,7 @@ const SignUp = () => {
     }
 
   return (
-    <div className="sign_up_container">
+    <SignInContainer>
         <h2>Don't Have an account?</h2>
         <span>Sign up with your email and password</span>
         <form onSubmit={handleSubmit}>
@@ -96,7 +96,7 @@ const SignUp = () => {
 
             <Btn type='submit'>Sign Up</Btn>
         </form>
-    </div>
+    </SignInContainer>
   )
 }
 
