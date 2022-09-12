@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { signInWithGooglePopup, createUserDocFromAuth, signInWithEmail } from "../../utilities/firebase/firebase";
+
+import { signInWithGooglePopup, 
+   // createUserDocFromAuth, 
+    signInWithEmail } from "../../utilities/firebase/firebase";
 
 import FormInput from "../form-input/form-input.component";
 import Btn, {BUTTON_TYPE_CLASSES} from "../button/button.component";
@@ -15,23 +18,27 @@ const SignIn = () => {
     const [formFields, setFormFields] = useState(defaultFormFields);
     const { email, password } = formFields;
 
-/* =======GOOGLE sign-in========================================================= */
-
-    const logGoogleUser = async () => {
-        await signInWithGooglePopup();
-        resetForm();
+    const resetForm = () => {
+        setFormFields(defaultFormFields)
     }
+
+/* =======GOOGLE sign-in========================================================= */
+const logGoogleUser = async () => {
+    await signInWithGooglePopup();
+    resetForm();
+  };
+    /* const logGoogleUser = async () => {
+        const {user} = await signInWithGooglePopup();
+        await createUserDocFromAuth(user);
+        resetForm();
+    } */
 
 /* ======FORM sign-in===================================================== */
-
-    const handleChange = ({target}) => {
-        setFormFields((otherFields)=> ({...otherFields, [target.name]: target.value}));
-    }
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const {user} = await signInWithEmail(email, password);
+            await signInWithEmail(email, password);
             resetForm();
         }
         catch(error){
@@ -51,10 +58,13 @@ const SignIn = () => {
            console.log('error signing in', error);
         }
     }
-    /* ======================================================================0 */
-    const resetForm = () => {
-        setFormFields(defaultFormFields)
+    
+    const handleChange = ({target}) => {
+        setFormFields((otherFields)=> ({...otherFields, [target.name]: target.value}));
     }
+
+    /* ======================================================================0 */
+   
 
   return (
     <SignInContainer>
@@ -92,4 +102,4 @@ const SignIn = () => {
   )
 }
 
-export default SignIn
+export default SignIn;

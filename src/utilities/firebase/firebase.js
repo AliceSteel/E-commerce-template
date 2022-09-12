@@ -1,13 +1,12 @@
 import { initializeApp } from 'firebase/app';
 import {getAuth, 
-    signInWithRedirect, 
+  //  signInWithRedirect, 
     signInWithPopup, 
     GoogleAuthProvider,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signOut,
-    onAuthStateChanged,
-    
+    onAuthStateChanged
     } from 'firebase/auth';
 import {
     getFirestore,
@@ -38,9 +37,10 @@ googleProvider.setCustomParameters({
 });
 
 export const auth = getAuth();
+
 export const signInWithGooglePopup = () => signInWithPopup(auth, googleProvider);
 
-export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
+//export const signInWithGoogleRedirect = () => signInWithRedirect(auth, googleProvider);
 
 export const db = getFirestore();
 
@@ -73,6 +73,7 @@ export const getCategoriesAndDocs = async () => {
 
 export const createUserDocFromAuth = async (userAuth, additionalInfo = {} ) => {
     if(!userAuth) return;
+    
     const userDocRef = doc(db, 'users', userAuth.uid);
 
     const userCheck = await getDoc(userDocRef);

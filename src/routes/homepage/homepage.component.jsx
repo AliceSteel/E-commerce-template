@@ -7,7 +7,15 @@ import img_6 from '../../assets/homePageImg_6.jpg';
 import img_7 from '../../assets/homePageImg_7.jpg';
 import img_8 from '../../assets/homePageImg_8.png';
 import img_9 from '../../assets/homePageImg_9.png';
-import { HomepageContainer, HomepageLogo, ImgWrap, QuoteSection, SectionItem_horiz, SectionItem_text, SectionItem_vertical, SectionPreviewWrap, SectionsContainer } from './homepage.styles.jsx'
+import { HomepageContainer,
+	 HomepageLogo, 
+	 ImgWrap, 
+	 QuoteSection,
+	SectionItem_horiz,
+	 SectionItem_text, 
+	 SectionItem_vertical, 
+	 SectionPreviewWrap, 
+	 SectionsContainer } from './homepage.styles.jsx'
 
 const Homepage = () => {
   const navigate = useNavigate();

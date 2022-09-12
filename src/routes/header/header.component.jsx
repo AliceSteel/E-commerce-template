@@ -25,9 +25,9 @@ const Header = () => {
 				<NavLinks>
                     <NavLink to='shop'>Shop</NavLink>
 
-					{currentUser ? (<NavLink onClick={signOutUser} >SIGN OUT</NavLink>)
+					 {currentUser ? (<div onClick={signOutUser} >SIGN OUT</div>)
 							: (<NavLink to='auth'>SIGN IN</NavLink>)}
-					<CartIcon/>
+					<CartIcon/> 
                 </NavLinks>
 				{ isCartOpen && <CartDropdown/>}
 			</HeaderContainer>

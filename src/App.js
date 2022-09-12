@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes} from 'react-router-dom';
+
 import Header from './routes/header/header.component';
 import Footer from './routes/footer/footer.component';
 import Homepage from './routes/homepage/homepage.component';
@@ -18,8 +19,7 @@ const App = () => {
 				<Route path='auth' element={<Auth/>}/>
 				<Route path='ckeckout' element={<Ckeckout/>}/>
 				<Route path='blog' element={<Blog/>}/>
-			</Route>
-				
+			</Route>	
 		</Route>
     </Routes>    
   );

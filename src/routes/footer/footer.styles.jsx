@@ -47,7 +47,7 @@ export const NavLink = styled(Link)`
     overflow: hidden;
     padding: 7px 0;
 
-  &::after{
+  &::after {
     background-color: #fff;
     content: "";
     opacity: 0;
@@ -61,7 +61,7 @@ export const NavLink = styled(Link)`
     transition: opacity 400ms, transform 400ms;
   }
   &:hover::after,
-  &:focus::after{
+  &:focus::after {
     opacity: 1;
 	  transform: translateX(0);
   }
