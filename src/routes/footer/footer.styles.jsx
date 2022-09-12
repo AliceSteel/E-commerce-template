@@ -45,7 +45,7 @@ export const NavLink = styled(Link)`
     text-transform: capitilize;
     position: relative;
     overflow: hidden;
-    padding: 7px 0;
+    padding: 4px 0;
 
   &::after {
     background-color: #fff;

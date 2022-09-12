@@ -36,6 +36,10 @@ export const NavLinks = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: 30px;
+
+  div {
+    cursor: pointer;
+  }
 `;
 
 export const NavLink = styled(Link)`
@@ -48,7 +52,7 @@ export const NavLink = styled(Link)`
   font-weight:700;
   position: relative;
 	overflow: hidden;
-  padding: 7px 0;
+  padding: 4px 0;
 
   &::after{
     background-color: #000;

@@ -11,9 +11,9 @@ import { HomepageContainer,
 	 HomepageLogo, 
 	 ImgWrap, 
 	 QuoteSection,
-	SectionItem_horiz,
-	 SectionItem_text, 
-	 SectionItem_vertical, 
+	SectionItemHoriz,
+	 SectionItemText, 
+	 SectionItemVertical, 
 	 SectionPreviewWrap, 
 	 SectionsContainer } from './homepage.styles.jsx'
 
@@ -37,10 +37,10 @@ const Homepage = () => {
 
 		<SectionsContainer>
 			<SectionPreviewWrap>
-				<SectionItem_vertical>
+				<SectionItemVertical>
 					<img src={img_6} alt="campaign"/>
-				</SectionItem_vertical>
-				<SectionItem_text>
+				</SectionItemVertical>
+				<SectionItemText>
 					<h2>Fall Campaign</h2>
 					<p>Shop the latest clothing trends with our weekly edit. From our latest Woman collection and other lines, we have dresses, coats, boots, bags and more to suit every woman and every occasion. Explore the latest fashion trends here and now with us.
 					</p>	
@@ -48,13 +48,13 @@ const Homepage = () => {
 						btnType={BUTTON_TYPE_CLASSES.inverted}
 						onClick={btnShopHandler}>SHOP NOW
 					</Btn>
-				</SectionItem_text>
+				</SectionItemText>
 
-				<SectionItem_horiz >
+				<SectionItemHoriz >
 					<ImgWrap>
 						<img src={img_7} alt="campaign" />
 					</ImgWrap>
-				</SectionItem_horiz>
+				</SectionItemHoriz>
 			</SectionPreviewWrap>
 		</SectionsContainer>
 		<QuoteSection>
@@ -66,10 +66,10 @@ const Homepage = () => {
 
 		<SectionsContainer>
 			<SectionPreviewWrap>
-					<SectionItem_vertical>
+					<SectionItemVertical>
 						<img src={img_9} alt="style"/>
-					</SectionItem_vertical>
-					<SectionItem_text>
+					</SectionItemVertical>
+					<SectionItemText>
 						
 							<h2>Fashion vs Style</h2>
 							<p>Looking deep into the roots of the history we can say that fashion is similar to a box. You lay your clothes down there and then close it. The next step is to turn the box over, open it and start again.
@@ -80,12 +80,12 @@ const Homepage = () => {
 								onClick={btnBlogHandler}>Read More
 							</Btn>
 						
-					</SectionItem_text>
-					<SectionItem_horiz >
+					</SectionItemText>
+					<SectionItemHoriz >
 						<ImgWrap>
 							<img src={img_8} alt="style" />
 						</ImgWrap>
-					</SectionItem_horiz>
+					</SectionItemHoriz>
 			</SectionPreviewWrap>
 		</SectionsContainer>
 	</>

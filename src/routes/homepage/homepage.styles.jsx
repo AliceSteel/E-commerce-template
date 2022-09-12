@@ -49,13 +49,13 @@ export const SectionPreviewWrap = styled.div`
     grid-template-rows: 1fr 1fr;
 `;
 
-export const SectionItem_vertical = styled.div`
+export const SectionItemVertical = styled.div`
     max-width: 500px;
     width: 100%;
     grid-area: 1/1/3/2;
     float: inline-start;
 `;
-export const SectionItem_text = styled.div`
+export const SectionItemText = styled.div`
     width: 100%;
     padding: 0 80px; 
     margin-top: -4px;
@@ -67,7 +67,7 @@ export const SectionItem_text = styled.div`
 	max-width: 605px;
 `;
 
-export const SectionItem_horiz = styled.div`
+export const SectionItemHoriz = styled.div`
     width: 100%;
     display: flex;
     justify-content: flex-end;
