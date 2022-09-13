@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { useDispatch } from 'react-redux';
 import { Route, Routes} from 'react-router-dom';
+
+import { onAuthStateChangedListener, createUserDocFromAuth } from "./utilities/firebase/firebase";
+import { setCurrentUser } from './store/user/user.action';
 
 import Header from './routes/header/header.component';
 import Footer from './routes/footer/footer.component';
@@ -10,6 +14,19 @@ import Auth from './routes/authentication/auth.component';
 import Blog from './routes/blog/blog.component';
 
 const App = () => {
+
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+        const unsubscribe = onAuthStateChangedListener((user)=>{
+            if (user) {
+                createUserDocFromAuth(user);
+            }
+            dispatch(setCurrentUser(user));
+        })
+        return unsubscribe;
+    }, []);
+
   return (
     <Routes>
 		<Route path='/' element={<Header/>}>

@@ -1,19 +1,21 @@
 import React, {useContext} from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 import Logo from '../../assets/logo.png';
-import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 
 import { signOutUser } from '../../utilities/firebase/firebase';
 
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
+import { selectCurrentUser } from '../../store/user/user.selector';
 
 import {HeaderContainer, NavLinks, NavLink, LogoContainer} from './header.styles'
 
 const Header = () => {
-	const {currentUser} = useContext(UserContext);
+	const currentUser = useSelector(selectCurrentUser);
+
 	const {isCartOpen} = useContext(CartContext);
 	
     return (
