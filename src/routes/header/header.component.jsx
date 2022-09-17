@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import Logo from '../../assets/logo.png';
-import { CartContext } from '../../contexts/cart.context';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
 import { signOutUser } from '../../utilities/firebase/firebase';
 
@@ -15,8 +15,7 @@ import {HeaderContainer, NavLinks, NavLink, LogoContainer} from './header.styles
 
 const Header = () => {
 	const currentUser = useSelector(selectCurrentUser);
-
-	const {isCartOpen} = useContext(CartContext);
+	const isCartOpen = useSelector(selectIsCartOpen);
 	
     return (
 		<>
