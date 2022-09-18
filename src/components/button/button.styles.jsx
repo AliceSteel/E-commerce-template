@@ -49,9 +49,15 @@ export const TransparentBtn = styled(BaseBtn)`
     background-color: transparent;
     color: #fff;
     border: 2px solid #fff;
-    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
     height: 70px;
     letter-spacing: 0.5px;
     font-size: 1.2rem;
+
+    @media (max-width: 520px) {
+      height: 40px;
+      font-size: 1rem;
+    }
 `;
 

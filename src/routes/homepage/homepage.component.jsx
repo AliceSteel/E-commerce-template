@@ -8,9 +8,9 @@ import img_7 from '../../assets/homePageImg_7.jpg';
 import img_8 from '../../assets/homePageImg_8.png';
 import img_9 from '../../assets/homePageImg_9.png';
 import { HomepageContainer,
-	 HomepageLogo, 
-	 ImgWrap, 
-	 QuoteSection,
+	HomepageLogo, 
+	ImgWrap, 
+	QuoteSection,
 	SectionItemHoriz,
 	 SectionItemText, 
 	 SectionItemVertical, 

@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 export const HomepageContainer = styled.div`
     width: 100%;
-    height: 100%;
-    min-height: 80vh;
+    height: calc(100vh - 80px);
     overflow: hidden;
     position: relative;
+
+    img {
+        height: 100%;
+    }
 
     &:hover {
         & img {
@@ -19,6 +22,7 @@ export const HomepageContainer = styled.div`
 export const HomepageLogo = styled.div`
     position:absolute;
     width: max-content;
+    max-width: 100%;
     left: 50%;
     transform: translateX(-50%);
     top: 50%;
@@ -32,6 +36,12 @@ export const HomepageLogo = styled.div`
 
     h1 {
         font-size: 70px;
+        @media (max-width: 670px) {
+            font-size: 40px;
+        }
+        @media (max-width: 420px) {
+            font-size: 30px;
+        }
     }
 `;
 
@@ -47,6 +57,11 @@ export const SectionPreviewWrap = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 `;
 
 export const SectionItemVertical = styled.div`
@@ -54,6 +69,13 @@ export const SectionItemVertical = styled.div`
     width: 100%;
     grid-area: 1/1/3/2;
     float: inline-start;
+
+    @media (max-width: 600px){
+        margin:0 auto;
+        padding:0 40px;
+        max-width: 405px;
+        float:none;
+    }
 `;
 export const SectionItemText = styled.div`
     width: 100%;
@@ -65,6 +87,12 @@ export const SectionItemText = styled.div`
 	justify-content: flex-start;
 	gap: 1.5rem;
 	max-width: 605px;
+
+    @media (max-width: 600px){
+        margin: 0 auto;
+        padding: 20px 40px;
+        max-width: 405px;
+    }
 `;
 
 export const SectionItemHoriz = styled.div`
@@ -93,5 +121,3 @@ export const QuoteSection = styled.div`
         font-size: 1.25rem;
     }
 `;
-
-

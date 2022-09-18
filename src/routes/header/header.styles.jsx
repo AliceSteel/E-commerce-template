@@ -18,6 +18,10 @@ export const HeaderContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   color: #000;
+
+  @media (max-width: 670px){
+    padding: 0 10px;
+  }
 `;
 
 export const LogoContainer = styled(Link)`
@@ -30,7 +34,7 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const NavLinks = styled.div`
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -39,6 +43,10 @@ export const NavLinks = styled.div`
 
   div {
     cursor: pointer;
+  }
+
+  @media (max-width: 570px) {
+    gap: 10px;
   }
 `;
 
@@ -71,6 +79,10 @@ export const NavLink = styled(Link)`
   &:focus::after{
     opacity: 1;
 	transform: translateX(0);
+  }
+
+  @media (max-width: 570px){
+    font-size: .8rem;
   }
 `;
 

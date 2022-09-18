@@ -16,6 +16,6 @@ export const CategoryWrap = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: flex-start;
+    justify-content: center;
 `;
 

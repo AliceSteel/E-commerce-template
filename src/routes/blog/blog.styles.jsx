@@ -4,6 +4,7 @@ export const BlogContainer = styled.div`
     width: 90%;
     max-width: 1191px;
     margin: 0 auto;
+
     p {
         padding: 100px 10px;
         line-height: 2rem;
@@ -21,19 +22,26 @@ export const TitileWrap = styled.div`
 
 export const ImgWrap = styled.div`
     width: 40%;
-    min-width: 400px;
+    min-width: 300px;
 `;
 export const Title = styled.div`
     width: 40%;
-    min-width: 400px;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    
+
     h1 {
+        width: 100%;
         font-size: 60px;
         text-transform: capitalize;
         position: relative;
         z-index: 5;
+
+        @media (max-width: 500px) {
+            font-size: 40px;
+        }
     }
     sub {
         text-transform: uppercase;
@@ -48,4 +56,8 @@ export const RedLine = styled.div`
     top: -20px;
     left: -5px;
     z-index: 4;
+
+    @media (max-width: 500px){
+        left: 0;
+    }
 `;
