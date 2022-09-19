@@ -25,7 +25,9 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-  width: 100px;
+  width: 100%;
+  height: 100%;
+  max-width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,5 +85,3 @@ export const NavLink = styled(Link)`
     font-size: .8rem;
   }
 `;
-
-
