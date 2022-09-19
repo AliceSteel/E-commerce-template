@@ -25,9 +25,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const LogoContainer = styled(Link)`
-  height: 100%;
-  width: 100%;
-  max-width: 100px;
+  width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;

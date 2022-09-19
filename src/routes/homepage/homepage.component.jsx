@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Btn, {BUTTON_TYPE_CLASSES} from '../../components/button/button.component'
 
-import homePageImg from '../../assets/homepage.png';
 import img_6 from '../../assets/homePageImg_6.jpg';
 import img_7 from '../../assets/homePageImg_7.jpg';
 import img_8 from '../../assets/homePageImg_8.png';
@@ -20,7 +19,9 @@ import { HomepageContainer,
 const Homepage = () => {
   const navigate = useNavigate();
   const btnShopHandler = () => navigate('/shop');
-  const btnBlogHandler = () => navigate('/blog')
+  const btnBlogHandler = () => navigate('/blog');
+
+  const homePageImg = require('../../assets/homepage.png');
 
   return (
 	<>
