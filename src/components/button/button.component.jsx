@@ -1,5 +1,5 @@
 import React from 'react';
-import {BaseBtn, GoogleSignInBtn, InvertedBtn, TransparentBtn} from './button.styles'
+import {BaseBtn, GoogleSignInBtn, InvertedBtn, TransparentBtn, SpinnerBtn} from './button.styles'
 
 export const BUTTON_TYPE_CLASSES = {
     base: 'base',
@@ -15,11 +15,14 @@ const getBtn = (btnType = BUTTON_TYPE_CLASSES.base) => ({
   [BUTTON_TYPE_CLASSES.transparent]: TransparentBtn
 }[btnType]);
 
-const Btn = ({children, btnType, ...otherProps}) => {
+const Btn = ({children, btnType, isLoading, ...otherProps}) => {
   const CustomBtn = getBtn(btnType);
 
   return (
-    <CustomBtn {...otherProps}>{children}</CustomBtn>
+    <CustomBtn disabled={isLoading} 
+              {...otherProps}
+              >{isLoading ? <SpinnerBtn/> : children}
+    </CustomBtn>
   )
 }
 

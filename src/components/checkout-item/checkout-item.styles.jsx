@@ -26,7 +26,8 @@ export const Item = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  text-transform: uppercase;
+  padding: 10px;
 `;
 
 export const Controler = styled.span`
